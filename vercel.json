@@ -1,9 +1,15 @@
 {
   "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "builds":[
     {
       "src": "server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "memory": 1024,
+        "maxDuration": 15
+      }
     }
   ],
   "rewrites":[
@@ -18,6 +24,25 @@
     {
       "source": "/(.*)",
       "destination": "/public/BingeBox_Omega_FINAL.html"
+    }
+  ],
+  "headers":[
+    {
+      "source": "/public/BingeBox_Omega_FINAL.html",
+      "headers":[
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=86400, stale-while-revalidate=31536000"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
     }
   ]
 }
