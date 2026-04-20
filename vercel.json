@@ -23,12 +23,12 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/BingeBox_Omega_FINAL.html"
+      "destination": "/index.html"
     }
   ],
   "headers":[
     {
-      "source": "/BingeBox_Omega_FINAL.html",
+      "source": "/index.html",
       "headers":[
         {
           "key": "Cache-Control",
