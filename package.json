@@ -1,0 +1,22 @@
+{
+  "name": "bingebox-omega",
+  "version": "3.0.0",
+  "description": "BingeBox Omega — Ultimate Cinematic Streaming Engine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "prod": "NODE_ENV=production node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0"
+  },
+  "keywords": ["streaming", "tmdb", "bingebox", "omega"],
+  "license": "MIT"
+}
