@@ -4,7 +4,7 @@
   "description": "BingeBox Omega — Ultimate Cinematic Streaming Engine",
   "main": "server.js",
   "scripts": {
-    "build": "node -e \"const fs=require('fs'); if(fs.existsSync('public/BingeBox_Omega_FINAL.html')) { fs.copyFileSync('public/BingeBox_Omega_FINAL.html', 'public/index.html'); console.log('✅ Copied BingeBox HTML to index.html'); }\"",
+    "prestart": "node -e \"const fs=require('fs'); if(fs.existsSync('public/BingeBox_Omega_FINAL.html')){ fs.copyFileSync('public/BingeBox_Omega_FINAL.html', 'public/index.html'); console.log('Successfully prepared public/index.html'); }\"",
     "start": "node server.js",
     "dev": "NODE_ENV=development node server.js",
     "prod": "NODE_ENV=production node server.js"
