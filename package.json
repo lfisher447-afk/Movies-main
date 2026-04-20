@@ -9,7 +9,7 @@
     "prod": "NODE_ENV=production node server.js"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "20.x"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -20,7 +20,7 @@
   "devDependencies": {
     "nodemon": "^3.1.0"
   },
-  "keywords":[
+  "keywords": [
     "streaming",
     "tmdb",
     "bingebox",
