@@ -185,3 +185,6 @@ function shutdown(sig){log.info(`${sig} received — shutting down gracefully`);
 process.on('SIGTERM',()=>shutdown('SIGTERM'));
 process.on('SIGINT',()=>shutdown('SIGINT'));
 module.exports=app;
+const server=app.listen(PORT,'0.0.0.0',()=>{
+  log.info('BingeBox Omega server started'...
+});
