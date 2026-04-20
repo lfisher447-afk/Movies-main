@@ -1,0 +1,15 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm run build"
+
+[deploy]
+startCommand = "npm start"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[env]
+PORT = "3000"
+NODE_ENV = "production"
+# The API key below is the default fallback, but you should safely override 
+# this inside your Railway Project Settings -> Variables dashboard later.
+TMDB_API_KEY = "15d2ea6d0dc1d476efbca3eba2b9bbfb"
